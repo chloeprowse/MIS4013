@@ -22,8 +22,13 @@
   Popover on left
 </button>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
- const exampleEl = document.getElementById('example')
- const popover = new bootstrap.Popover(exampleEl, options)
-
+<script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var popoverElements = document.querySelectorAll('[data-bs-toggle="popover"]');
+        popoverElements.forEach(function (element) {
+          new bootstrap.Popover(element);
+        });
+      });
+    </script>
   </body>
 </html>
